@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+    <title>Question 3</title>
+
+    <script>
+      function showLion()
+      {
+    
+        var imageElement = document.getElementById("animalHolder");
+        imageElement.src = "lion.png";
+      }
+
+      function showFrog()
+      {
+        var imageElement = document.getElementById("animalHolder");
+        imageElement.src = "frog.png";
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <button onClick="showLion();">
+      Lion
+    </button>
+
+    <button onClick="showFrog();">
+      Frog
+    </button>
+
+    <br /><br />
+
+    <img id="animalHolder" height="200px" />
+
+
+  </body>
+
+</html>

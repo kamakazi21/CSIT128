@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Week 6: CSIT128 - Question 2</title>
+    <script>
+
+      function checkAnswer()
+      {
+        var inputField1 = document.getElementById("input1");
+        var number1 = Number(inputField1.value);
+
+        var inputField2 = document.getElementById("input2");
+        var number2 = Number(inputField2.value);
+
+        var operationSelect = document.getElementById("operationSelect");
+        var operation = operationSelect.value;
+
+        var correctAnswer;
+
+        if(operation == "add")
+        {
+          correctAnswer = number1 + number2;
+        }
+        else if(operation == "subtract")
+        {
+          correctAnswer = number1 - number2;
+        }
+        else if(operation == "multiply")
+        {
+          correctAnswer = number1 * number2;
+        }
+
+        var answerField = document.getElementById("answer");
+        var userAnswer = Number(answerField.value);
+
+        var checkMessageSpan = document.getElementById("checkMessage");
+
+        if (userAnswer == correctAnswer)
+        {
+          checkMessageSpan.innerHTML = "Correct!";
+        }
+        else
+        {
+          checkMessageSpan.innerHTML = "Incorrect, please try again.";
+        }
+      }
+
+    </script>
+  </head>
+
+  <body>
+
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 2</ins></h3>
+  
+    <input type="text" size="5" id="input1" />
+
+    <select id="operationSelect">
+      <option value="add"> + </option>
+      <option value="subtract"> - </option>
+      <option value="multiply"> x </option>
+    </select>
+
+    <input type="text" size="5" id="input2" />
+
+    =
+
+    <input type="text" size="5" id="answer" />
+
+    <button onClick="checkAnswer();">
+      Check
+    </button>
+
+    <span id="checkMessage"></span>
+
+  </body>
+
+</html>

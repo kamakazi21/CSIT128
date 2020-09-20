@@ -1,0 +1,38 @@
+<html>  
+ <head>    
+  <title>Assignment 2: CSIT128 - Question 3</title>
+  <script>
+    function swapSelection()
+    {
+	 var temp = document.getElementById("input1").value;
+	 document.getElementById("input1").value = document.getElementById("input2").value;
+	 document.getElementById("input2").value= temp;
+	}
+	
+	function clearSelection()
+    {
+	 document.getElementById("input1").value=""
+	 document.getElementById("input2").value="";
+	}
+  </script>
+ </head>  
+ 
+ <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 3</ins></h3>
+  <br />
+    <input type="text" size="10" id="input1" />
+    <br />
+    <input type="text" size="10" id="input2" />
+    <br />
+	<br />
+	<button onClick="swapSelection()">
+      Swap Text
+    </button>
+	
+	<button onClick="clearSelection()">
+      Clear Text
+    </button>
+ </body>
+</html>

@@ -1,0 +1,60 @@
+<html>  
+ <head>    
+  <title>Assignment 2: CSIT128 - Question 5</title>
+<script>
+   function swapSelection1() 
+   {
+    var imgElement1 = document.getElementById('1')
+	var imgElement2 = document.getElementById('2')
+	var temp = imgElement1.src
+    imgElement1.src = imgElement2.src
+	imgElement2.src = temp
+   }
+   
+    function swapSelection2() 
+   {
+    var imgElement1 = document.getElementById('2')
+	var imgElement2 = document.getElementById('3')
+	var temp = imgElement1.src
+    imgElement1.src = imgElement2.src
+	imgElement2.src = temp
+   }
+   
+   function swapSelection3() 
+   {
+    var imgElement1 = document.getElementById('3')
+	var imgElement2 = document.getElementById('4')
+	var temp = imgElement1.src
+    imgElement1.src = imgElement2.src
+	imgElement2.src = temp
+   }
+   
+   function swapSelection4() 
+   {
+    var imgElement1 = document.getElementById('4')
+	var imgElement2 = document.getElementById('5')
+	var temp = imgElement1.src
+    imgElement1.src = imgElement2.src
+	imgElement2.src = temp
+   }
+</script>
+ </head>  
+ 
+ 
+ <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 5</ins></h3>
+    <br />
+    <img id="1" src="1.png" style="width:100px">
+    <button onClick="swapSelection1()">Swap </button> 
+    <img id="2" src="2.png" style="width:100px">
+	<button onClick="swapSelection2()">Swap</button>
+	<img id="3" src="3.png" style="width:100px">
+    <button onClick="swapSelection3()">Swap </button> 
+    <img id="4" src="4.png" style="width:100px">
+	<button onClick="swapSelection4()">Swap</button>
+	<img id="5" src="5.png" style="width:100px">
+
+  </body>
+</html>

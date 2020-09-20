@@ -1,0 +1,36 @@
+<html>
+
+  <head>
+    <title>Question 2</title>
+
+    <script>
+      function doLion()
+      {
+        var messageTextField = document.getElementById("messageBox");
+        messageTextField.value = "The Lion Button is clicked";
+      }
+
+      function doFrog()
+      {
+        var messageTextField = document.getElementById("messageBox");
+        messageTextField.value = "The Frog Button is clicked";
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <button  onClick="doLion();">
+      Lion
+    </button>
+
+    <button  onClick="doFrog();">
+      Frog
+    </button>
+
+    <br /><br />
+
+    <input type="text" size="50" id="messageBox" />
+
+  </body>
+</html>

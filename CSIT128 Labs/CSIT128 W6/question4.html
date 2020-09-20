@@ -1,0 +1,62 @@
+<html>
+
+  <head>
+    <title>Week 6: CSIT128 - Question 4</title>
+
+    <script>
+
+      var counter = 0;
+      var animationOn = false;
+      var counterAnimation;
+
+      function updateCounter()
+      {
+        counter = counter + 1;
+
+        var counterSpan = document.getElementById("counterHolder");
+        counterSpan.innerHTML = counter;
+      }
+
+      function startCounterAnimation()
+      {
+        if(!animationOn)
+        {
+          animationOn = true;
+
+          counterAnimation = setInterval(updateCounter, 1000);
+        }
+      }
+
+      function stopCounterAnimation()
+      {
+        if(animationOn)
+        {
+          animationOn = false;
+
+          clearInterval(counterAnimation);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 4</ins></h3>
+  
+    <button onClick="startCounterAnimation();">
+      Start counter animation
+    </button>
+
+    <button onClick="stopCounterAnimation();">
+      Stop counter animation
+    </button>
+
+    <br /><br />
+
+    <span id="counterHolder">0</span>
+
+  </body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Question 6</title>
+
+    <script>
+      var FROG_FACE = "&#x1F438;";
+      var frogFaceMessage = "";
+
+      function showFrogFace()
+      {
+        frogFaceMessage = frogFaceMessage + FROG_FACE;
+        var frogSpan = document.getElementById("frogFaceHolder");
+        frogSpan.innerHTML = frogFaceMessage;
+      }
+
+    </script>
+  </head>
+
+  <body>
+
+    <img src="frog.png" height="150px" onClick="showFrogFace();" />
+
+    <br /><br />
+
+    <span id="frogFaceHolder"></span>
+
+  </body>
+
+</html>
