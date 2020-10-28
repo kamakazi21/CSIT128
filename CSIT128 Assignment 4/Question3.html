@@ -1,0 +1,73 @@
+<html>
+
+  <head>
+    <title>Assignment 4: CSIT128 - Question 3</title>
+
+    <script>
+      function showJson()
+      {
+        var nameTf = document.getElementById("fullName");
+        var name = nameTf.value;
+
+        var numberTf = document.getElementById("studentNumber");
+        var number = Number(numberTf.value);
+
+        var subjectTf = document.getElementById("subjectCode");
+        var subject = subjectTf.value;
+		
+		var titleTf = document.getElementById("subjectTitle");
+        var title = titleTf.value;
+		
+		var declarationTf = document.getElementById("declaration");
+        var declaration = declarationTf.value;
+
+        var studentObj = {};
+        studentObj.fullName = name
+        studentObj.studentNumber = number;
+        studentObj.subjectCode = subject;
+        studentObj.subjectTitle = title;
+		studentObj.plagarismDeclaration = declaration;
+
+        // translate object to JSON
+        var studentJson = JSON.stringify(studentObj, null, 2);
+
+        // display json in the textarea
+        var displayTextarea = document.getElementById("display");
+        displayTextarea.value = studentJson;
+      }
+
+    </script>
+  </head>
+  
+  <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 3</ins></h3>
+  <table border="0">
+   <tr>
+    <td>Enter full name:</td>
+    <td><input type="text" id="fullName" /></td>
+   </tr>
+   <tr>
+    <td>Enter student number:</td>
+    <td><input type="text" id="studentNumber" /></td>
+   </tr>
+   <tr>
+    <td>Enter subject code:</td>
+    <td><input type="text" id="subjectCode" /></td>
+   </tr>
+   <tr>
+    <td>Enter subject title:</td>
+    <td><input type="text" id="subjectTitle" /></td>
+   </tr>
+   <tr>
+    <td> Enter plagiarism declaration:</td>
+    <td><textarea rows="7" cols="50" id="declaration"> </textarea></td>
+   </tr>
+   <tr>
+	<td><button onClick="showJson();">JSON stringify</button></td>
+    <td><textarea rows="20" cols="50" id="display"> </textarea></td>
+	</tr>
+	</table>
+  </body>
+</html>

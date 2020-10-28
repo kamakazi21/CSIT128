@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 4: CSIT128 - Question 4</title>
+	<style> table, th, td {border='0'; style='width:800px'}th, td { padding: 10px;}</style>
+  <script>
+  function showJson()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+  readyStateChangeHandler(xhttp);  
+  };
+  xhttp.open("GET", "Question4.json", true);
+  xhttp.send();
+  } 
+  
+  function readyStateChangeHandler(xhttp)
+  {
+  if (xhttp.readyState == 4){
+    if(xhttp.status == 200){
+      handleStatusSuccess(xhttp);
+    }else{
+      handleStatusFailure(xhttp);
+    }
+   }
+  }
+
+  function handleStatusFailure(xhttp){
+  var displayDiv = document.getElementById("display");
+  displayDiv.innerHTML = "XMLHttpRequest failed: status " + xhttp.status;
+  }
+
+  function handleStatusSuccess(xhttp){
+  var jsonText = xhttp.responseText;
+  var studentObj = JSON.parse(jsonText);
+  displayStudent(studentObj);
+} 
+   function displayStudent(studentObj){
+    var count = 0
+    var html1 = "<h2>Test result. Student Reference Number: " + studentObj.studentRefNumber + "</h2>";
+	var html = "";
+    html += "<table>";
+    html += "<tr><th>Question</th><th align='left'>Content</th><th align='left'>Topic</th><th>Correct Answer</th><th>Your Answer</th><th align='left'>Difficulty</th></tr>";
+    for(var i=0; i < studentObj.testResult.length; i++){
+    var stdObj = studentObj.testResult[i];
+    html += "<tr>";   
+    if(stdObj.correctAnswer == stdObj.yourAnswer) {html += "<td align='center'>"; count++;}
+	else {html += "<td style='background-color:#D6D6D6'; align='center'>"}
+    html += stdObj.questionNumber + "</td>";
+    html += "<td align='left'>" + stdObj.content + "</td>";
+    html += "<td align='left'>" + stdObj.topic + "</td>";
+	html += "<td align='center'>" + stdObj.correctAnswer + "</td>";
+	if(stdObj.correctAnswer == stdObj.yourAnswer){html += "<td align='center'>"+"&#10003"+"</td>";}
+	else {html += "<td align='center'>" + stdObj.yourAnswer + "</td>";}
+	html += "<td align='left'>";
+	html += "&#11088".repeat(stdObj.difficultyLevel);
+    html += "</td>";	
+    html += "</tr>";
+	}
+    html += "</table>";
+	var html2 = "You scored "+count+" out of 10.<br /><br /><br />";
+	var html3 = html1+html2+html;
+    var displayDiv = document.getElementById("display");
+    displayDiv.innerHTML = html3;   
+   }
+   </script>
+  </head> 
+  <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 4</ins></h3>
+  <button onClick="showJson();">Get Test Result</button>
+  <span id = "display"> </span>
+  </body>
+</html>

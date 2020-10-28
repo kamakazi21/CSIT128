@@ -1,0 +1,57 @@
+{
+   "source": "Wollongong",
+   "destination": "Kiama",
+   "due": "5min",
+   "station": [
+      {
+         "name": "Wollongong Station",
+         "departure": "08:54",
+         "platform": "P2"
+      },
+      {
+         "name": "Coniston Station",
+         "departure": "08:56",
+         "platform": "P2"
+      },
+      {
+         "name": "Unanderra Station",
+         "departure": "09:01",
+         "platform": "P1"
+      },
+      {
+         "name": "Dapto Station",
+         "departure": "09:07",
+         "platform": "P2"
+      },
+      {
+         "name": "Albion Park Station",
+         "departure": "09:15",
+         "platform": "P2"
+      },
+      {
+         "name": "Oak Flats Station",
+         "departure": "09:21",
+         "platform": "P1"
+      },
+      {
+         "name": "Shellharbour Junction",
+         "departure": "09:25",
+         "platform": "P2"
+      },
+      {
+         "name": "Minnamurra Station",
+         "departure": "09:29",
+         "platform": "P1"
+      },
+      {
+         "name": "Bombo Station",
+         "departure": "09:34",
+         "platform": "P1"
+      },
+      {
+         "name": "Kiama Station",
+         "departure": "09:38",
+         "platform": "P2"
+      }
+   ]
+}

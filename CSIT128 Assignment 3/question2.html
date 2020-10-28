@@ -1,0 +1,45 @@
+<html>  
+ <head>    
+  <title>Assignment 3: CSIT128 - Question 2</title>
+  <script> 
+   var Schedule;
+   var temp;
+   function startAnimation()
+   {
+    document.getElementById("a").disabled = true;
+    Schedule = setInterval(Display, 500);
+   }
+   function Display()
+   {
+    if (temp == 0)
+	{
+    var Display = document.getElementById("Display");
+	Display.src = "1.png";
+	temp = 1;
+	}
+	else
+	{
+	 var Display = document.getElementById("Display");
+	 Display.src = "6.png";
+	 temp = 0;
+	}
+   }
+   function stopAnimation()
+   {
+    document.getElementById("a").disabled = false;
+    clearInterval(Schedule);
+   }
+  </script>
+ </head>  
+ <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 2</ins></h3>
+    <tr>
+		 <button onClick="startAnimation()" id = "a">Start Animation</button>
+         <button onClick="stopAnimation()">Stop Animation</button>
+    </tr>
+    <br /><br />
+    <img id="Display" width="500">
+  </body>
+</html>

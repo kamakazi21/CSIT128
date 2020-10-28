@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="question1.xsl"?>
+
+<timetable source="Wollongong" destination="Kiama" due="5min">
+ <station name="Wollongong Station">
+ <departure>08:54</departure>
+ <platform>P2</platform>
+ </station>
+ <station name="Coniston Station">
+ <departure>08:56</departure>
+ <platform>P2</platform>
+ </station>
+ <station name="Unanderra Station">
+ <departure>09:01</departure>
+ <platform>P1</platform>
+ </station>
+ <station name="Dapto Station">
+ <departure>09:07</departure>
+ <platform>P2</platform>
+ </station>
+  <station name="Albion Park Station">
+ <departure>09:15</departure>
+ <platform>P2</platform>
+ </station>
+ <station name="Oak Flats Station">
+ <departure>09:21</departure>
+ <platform>P1</platform>
+ </station>
+ <station name="Shellharbour Junction">
+ <departure>09:25</departure>
+ <platform>P2</platform>
+ </station>
+ <station name="Minnamurra Station">
+ <departure>09:29</departure>
+ <platform>P1</platform>
+ </station>
+ <station name="Bombo Station">
+ <departure>09:34</departure>
+ <platform>P1</platform>
+ </station> 
+ <station name="Kiama Station">
+ <departure>09:38</departure>
+ <platform>P2</platform>
+ </station>  
+</timetable>

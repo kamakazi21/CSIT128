@@ -1,0 +1,2 @@
+[1015/014101.761:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sadua\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\e449dbbb-11ac-4615-8464-b1b6cb923344: The system cannot find the path specified. (0x3)
+[1015/014723.110:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

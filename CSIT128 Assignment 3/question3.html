@@ -1,0 +1,70 @@
+<html>  
+ <head>    
+  <title>Assignment 3: CSIT128 - Question 3</title>
+  <script>
+    var Schedule;
+	var value;
+	var win;
+	var lose;
+    function Animation()
+    {
+	 var Display = document.getElementById("Display");
+	 value = 0;
+	 Display.innerHTML = "Your score is "+value;
+	 document.getElementById("a").disabled = true;
+     Schedule = setInterval(showImage, 500);
+	}
+	function changeScore()
+	{
+	 var IMG = document.getElementById("Image");
+	 if (IMG.src.match("1.png") && value <5)
+	 {
+	  var Display = document.getElementById("Display");
+	  value ++;
+	  Display.innerHTML = "Your score is "+value;
+	 }
+	 else
+	 {
+	  if (value <5 && value>-5)
+	  {
+	   var Display = document.getElementById("Display");
+	   value --;
+	   Display.innerHTML = "Your score is "+value;
+	  }
+	 }
+	 if (value == 5)
+	 {
+	  clearInterval(Schedule);
+	  var Display = document.getElementById("Display");
+	  Display.innerHTML = "Your score is 5. Game over - You Win!";
+	  document.getElementById("a").disabled = false;
+	 }
+	 else if (value == -5)
+	 {
+	  clearInterval(Schedule);
+	  var Display = document.getElementById("Display");
+	  Display.innerHTML = "Your score is -5. Game over - You Lose!";
+	  document.getElementById("a").disabled = false;
+	 }
+	}
+	function showImage()
+	{
+	 var randNum = Math.floor(Math.random() * 5) + 1;
+	 var IMG = document.getElementById("Image");
+	 IMG.src = randNum+".png"
+	}
+  </script>
+ </head>  
+ 
+ <body>
+  <h1>Kazi Swad Abdullah, SN: 5220683</h1>
+  <hr /> 
+  <h3><ins>Question 3</ins></h3>
+  <br />
+	<button onClick="Animation()" id ="a">Start frog game</button>
+	<br /><br />
+    <span id = "Display"> </span>
+	<br /><br />
+	<img id = "Image" onClick = "changeScore()" height = "150" width = "200">
+ </body>
+</html>
